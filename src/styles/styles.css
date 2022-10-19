@@ -1,0 +1,95 @@
+/* Header */
+
+.header{
+    position: absolute;
+    width: 1240px;
+    height: 68px;
+    left: 100px;
+    top: 40px;
+}
+.header__logo{
+    position: absolute;
+    left: 0%;
+    right: 83.04%;
+    top: 0%;
+    bottom: 0%;
+}
+nav{
+    position: absolute;
+    left: 75.08%;
+    right: 0%;
+    top: 25%;
+    bottom: 25%;
+}
+.T1{
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    /* or 34px */
+
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+
+    color: #FF6060;
+}
+.T2{
+    position: absolute;
+    right: 13.95%;
+    top: 25%;
+    bottom: 25%;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    /* or 34px */
+
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+
+    color: #FF6060;
+}
+
+
+/* Footer */ 
+.footer{
+    position: relative;
+    width: 1440px;
+    height: 209px;
+    background: #000000;
+}
+.footer__text{
+    position: absolute;
+    left: 37%;
+    right: 32.22%;
+    top: 64.11%;
+    bottom: 13.88%;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    /* or 34px */
+
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #FFFFFF;
+}
+.footer__logo {
+    position: absolute;
+    left: 45.76%;
+    right: 45.76%;
+    top: 31.58%;
+    bottom: 49.55%;
+}
