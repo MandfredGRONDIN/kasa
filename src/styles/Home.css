@@ -1,0 +1,68 @@
+section{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 60px 0 60px 0;
+    width: 100%;
+    align-items: center;
+}
+section p{
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    color: #FFFFFF;
+}
+.test{
+    width: 100%;
+    max-width: 92%;
+    border-radius: 10px;
+    min-height: 100px;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product__item{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-end;
+    overflow: hidden;
+    max-width: 400px;
+    width: 92%;
+    margin: 4%;
+    border-radius: 10px;
+    
+}
+.product__title{
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 0 0 20px 15px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.product__img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+@media all and (max-width:768px){
+    section{
+        margin: 0;
+    }
+    section p{
+        font-size: 19px;
+    }
+    .product__img{
+        width: 100%;
+        max-width: 400px;
+    }
+}

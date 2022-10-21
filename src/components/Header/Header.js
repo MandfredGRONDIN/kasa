@@ -7,10 +7,13 @@ export default function Header(){
     return(
         <div className='header'>
             <nav>
-                <Link to='/' className='items'>Acceuil</Link>
-                <Link to="/APropos" className='items'>A Propos</Link>
+                <img className="header__logo" src={Img} alt='test'></img>
+                <ul>
+                    <li><Link to='/' className='items'>Acceuil</Link></li>
+                    <li><Link to="/about" className='items'>A Propos</Link></li>
+                </ul>
             </nav>
-            <img className="header__logo" src={Img} alt='test'></img>
+            
         </div>
     )
 }
