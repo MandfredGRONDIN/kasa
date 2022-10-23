@@ -6,14 +6,21 @@ import '../../styles/test.css'
 
 
 
-function Slider(){
+function Slider() {
     const [currImg, setCurrImg] = useState(0)
-    return(
+
+
+    return (
         <div className='gallery'>
             {Products.map((product) => (
-                <div key={product.id}>
-                    <Carousel showArrows={true}>
-                        <img src={product.pictures[currImg]} alt=''/>
+                <div className='gallery__img' key={product.id}>
+                    <Carousel showThumbs={false} showIndicators={false}>
+                        {product.pictures.map((picture, k) => (
+                            <div key={k}>
+                                <img src={picture} alt=''/>
+                                <h2>{product.title}</h2>
+                            </div>
+                        ))}
                     </Carousel>
                 </div>
             ))}

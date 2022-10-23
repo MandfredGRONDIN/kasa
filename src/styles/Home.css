@@ -25,18 +25,19 @@ section p{
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .product__item{
     display: flex;
     position: relative;
     justify-content: flex-start;
     align-items: flex-end;
     overflow: hidden;
-    max-width: 400px;
+    max-width: 350px;
     width: 92%;
     margin: 4%;
     border-radius: 10px;
-    
 }
+
 .product__title{
     position: absolute;
     font-family: 'Montserrat';
@@ -49,8 +50,8 @@ section p{
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 .product__img{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
 }
 
@@ -63,6 +64,6 @@ section p{
     }
     .product__img{
         width: 100%;
-        max-width: 400px;
+        max-width: 350px;
     }
 }
