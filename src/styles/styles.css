@@ -36,7 +36,34 @@ li a:hover{
 }
 /* Fin Header */
 /* Error */
-
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 70px 0 20px 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    color: #FF6060;
+}
+.error p{
+    font-weight: 500;
+    font-size: 36px;
+    width: 95%;
+}
+.error__home{
+    text-decoration: none;
+    font-size: 18px;
+    color: #FF6060;
+    margin: 70px 0 ;
+}
+.error__home:hover{
+    text-decoration: underline;
+}
+.error img{
+    width: 95%;
+}
+/* Fin Error */
 /* Footer */ 
 .footer{
     display: flex;
@@ -68,6 +95,10 @@ li a:hover{
         padding: 0 10px 0 10px;
     }
     .footer__text{
+        font-size: 19px;
+    }
+    /* Error */
+    .error p{
         font-size: 19px;
     }
 }

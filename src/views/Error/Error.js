@@ -1,14 +1,19 @@
-import React from 'react'
-import '../../styles/styles.css'
+import React from "react";
+import "../../styles/styles.css";
+import Img from "../../assets/404.png";
+import { Link } from "react-router-dom";
+import "../../styles/styles.css";
 
-export default function Error(){
-    return(
-        <div >
-            <p>Retour sur la page d'acceuil</p>
-            <h1>Oups! La page que vous demandez n'existe pas</h1>
-            <div >
-                <p>Error test</p>
-            </div>
-        </div>
-    )
+export default function Error() {
+   return (
+      <div className="error">
+         <div>
+            <img src={Img} alt="erreur 404" />
+         </div>
+         <p>Oups! La page que vous demandez n'existe pas.</p>
+         <Link to={`/`} className="error__home">
+            Retour sur la page d'acceuil
+         </Link>
+      </div>
+   );
 }
