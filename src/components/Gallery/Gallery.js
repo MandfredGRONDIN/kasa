@@ -4,16 +4,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function Slider(product) {
    return (
-      <div>
-         <div className="Carousel">
-            <Carousel showThumbs={false} showIndicators={false}>
-               {product.data.pictures.map((picture) => (
-                  <div>
-                     <img src={picture} alt=""></img>
-                  </div>
-               ))}
-            </Carousel>
-         </div>
+      <div className="Carousel">
+         <Carousel showThumbs={false} showIndicators={false}>
+            {product.data.pictures.map((picture, key) => (
+               <div className="house__div" key={key}>
+                  <img className="house__img" src={picture} alt=""></img>
+               </div>
+            ))}
+         </Carousel>
       </div>
    );
 
