@@ -19,17 +19,30 @@ export default function FicheLogement() {
          <div className="house__carousel">
             {Products.filter((product) => product.id === params.id).map(
                (product, index) => (
-                  <div key={product.id} className="house__box">
+                  <div key={product.id} className="house__boxes">
                      <Slider data={product} />
-                     <div className="house__title">
-                        <h2>{product.title}</h2>
-                        <p>{product.location}</p>
-                        <div className="tags">
-                           {product.tags.map((tag, key) => (
-                              <div className="tag" key={key}>
-                                 {tag}
-                              </div>
-                           ))}
+                     <div className="house__box">
+                        <div className="house__left">
+                           <h2>{product.title}</h2>
+                           <p>{product.location}</p>
+                           <div className="tags">
+                              {product.tags.map((tag, key) => (
+                                 <div className="tag" key={key}>
+                                    {tag}
+                                 </div>
+                              ))}
+                           </div>
+                        </div>
+                        <div className="house__right">
+                           <div className="house__name">
+                              <p>{product.host.name}</p>
+                              <img
+                                 className="house__host"
+                                 src={product.host.picture}
+                                 alt="Propriétaire du logement"
+                              />
+                           </div>
+                           <div> Rating </div>
                         </div>
                      </div>
                   </div>
