@@ -2,7 +2,6 @@ import React from "react";
 import "../../styles/styles.css";
 import Img from "../../assets/404.png";
 import { Link } from "react-router-dom";
-import "../../styles/styles.css";
 
 export default function Error() {
    return (

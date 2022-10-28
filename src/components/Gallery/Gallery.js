@@ -1,36 +1,89 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useState } from "react";
+import ArrowLeft from "../../assets/ArrowLeft.png";
+import ArrowRight from "../../assets/ArrowRight.png";
 
 function Slider(product) {
+   const [currentIndex, setCurrentIndex] = useState(0);
+
+   const slides = product.data;
+
+   const sliderStyles = {
+      height: "100%",
+      position: "relative",
+   };
+
+   const slideStyles = {
+      width: "100%",
+      height: "100%",
+      borderRadius: "25px",
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundImage: `url(${slides[currentIndex]})`,
+   };
+
+   const leftArrowStyles = {
+      position: "absolute",
+      top: "50%",
+      transform: "translate(0, -50%)",
+      left: "20px",
+      zIndex: 1,
+      cursor: "pointer",
+   };
+
+   const rightArrowStyles = {
+      position: "absolute",
+      top: "50%",
+      transform: "translate(0, -50%)",
+      right: "20px",
+      zIndex: 1,
+      cursor: "pointer",
+   };
+
+   const numberStyles = {
+      display: "flex",
+      width: "100%",
+      justifyContent: "center",
+      height: "96%",
+      alignItems: "flex-end",
+      color: "#FFFFFF",
+      fontSize: "17px",
+      fontFamily: "Montserrat",
+   };
+
+   const goToPrevious = () => {
+      const isFirstSlide = currentIndex === 0;
+      const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+      setCurrentIndex(newIndex);
+   };
+
+   const goToNext = () => {
+      const isLastSlide = currentIndex === slides.length - 1;
+      const newIndex = isLastSlide ? 0 : currentIndex + 1;
+      setCurrentIndex(newIndex);
+   };
+
    return (
-      <div className="Carousel">
-         <Carousel showThumbs={false} showIndicators={false}>
-            {product.data.pictures.map((picture, key) => (
-               <div className="house__div" key={key}>
-                  <img className="house__img" src={picture} alt=""></img>
-               </div>
-            ))}
-         </Carousel>
+      <div style={sliderStyles}>
+         <img
+            style={leftArrowStyles}
+            src={ArrowLeft}
+            alt="flèche vers la gauche"
+            onClick={goToPrevious}
+         ></img>
+         <img
+            style={rightArrowStyles}
+            src={ArrowRight}
+            alt="flèche vers la droite"
+            onClick={goToNext}
+         ></img>
+         <div style={slideStyles}>
+            <div style={numberStyles}>
+               {currentIndex + 1}/{slides.length}
+            </div>
+         </div>
       </div>
    );
-
-   /* return (
-		<div className="gallery">
-			{Products.map((product) => (
-				<div className="gallery__img" key={product.id}>
-					<Carousel showThumbs={false} showIndicators={false}>
-						{product.pictures.map((picture, k) => (
-							<div key={k}>
-								<img src={picture} alt="" />
-								<h2>{product.title}</h2>
-							</div>
-						))}
-					</Carousel>
-				</div>
-			))}
-		</div>
-	); */
 }
 
 export default Slider;

@@ -5,17 +5,17 @@ body{
 nav{
     display: flex;
     justify-content: space-between;
-    padding: 2%;
+    width: 90%;
+    margin: 2% 0 3% 5%;
     align-items: center;
 }
 nav ul{
     display: flex;
-    justify-content: space-between;
     list-style: none;
 }
 nav li{
     display: block;
-    padding: 0 40px 0 40px; 
+    padding: 0 0 0 80px; 
        
 }
 li a{
