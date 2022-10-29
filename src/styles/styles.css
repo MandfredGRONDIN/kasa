@@ -1,5 +1,6 @@
 body{
     margin: 0; 
+    background: #E5E5E5;
 }
 /* Header */
 nav{
@@ -11,7 +12,7 @@ nav{
 }
 nav ul{
     display: flex;
-    list-style: none;
+    padding: 0;
 }
 nav li{
     display: block;
@@ -22,8 +23,6 @@ li a{
     cursor: pointer;
     font-size: 24px;
     font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
     text-decoration: none;
     color: #FF6060;
 }
@@ -43,8 +42,6 @@ li a:hover{
     text-align: center;
     margin: 70px 0 20px 0;
     font-family: 'Montserrat';
-    font-style: normal;
-    color: #FF6060;
 }
 .error p{
     font-weight: 500;
@@ -77,9 +74,6 @@ li a:hover{
 .footer__text{
     margin-top: 30px;
     font-size: 24px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
     color: #FFFFFF;
 }
 
@@ -98,7 +92,11 @@ li a:hover{
         font-size: 19px;
     }
     /* Error */
+    .error img{
+        width: 80%;
+    }
     .error p{
         font-size: 19px;
+        width: 80%;
     }
 }

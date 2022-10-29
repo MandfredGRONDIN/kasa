@@ -1,6 +1,6 @@
 import React from "react";
-import Img from "../../assets/About.png";
-import Img2 from "../../assets/AboutM.png";
+import AboutImg from "../../assets/About.png";
+import AboutM from "../../assets/AboutM.png";
 import DropDown from "../../components/Drop/Dropdown";
 import "../../styles/About.css";
 
@@ -30,13 +30,21 @@ export default function About() {
    return (
       <div className="about">
          <section>
-            <img className="about__img" src={Img} alt="montagne" />
-            <img className="about__img2" src={Img2} alt="montagne" />
+            <img
+               className="about__img"
+               src={AboutImg}
+               alt="relief de montagne"
+            />
+            <img
+               className="about__img2"
+               src={AboutM}
+               alt="relief de montagne"
+            />
          </section>
          <div className="dropdown">
             {items.map((item) => (
                <div className="dropdown__box" key={item.id}>
-                  <DropDown items={item} />
+                  <DropDown txt={item.text} title={item.value} />
                </div>
             ))}
          </div>

@@ -47,7 +47,13 @@
 }
 
 @media all and (max-width:630px){
+    .dropdown{
+        margin-top: 10px;
+    }
     .dropdown__p{
+        font-size: 19px;
+    }
+    .dropdown__button{
         font-size: 19px;
     }
     .about__img{

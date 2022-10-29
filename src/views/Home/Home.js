@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Home.css";
-import Img from "../../assets/Home.png";
+import HomeImg from "../../assets/Home.png";
 import Products from "../../products.json";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <div className="home">
          <section>
             <p>Chez vous, partout et ailleurs</p>
-            <img className="test" src={Img} alt="la nature"></img>
+            <img className="home__img" src={HomeImg} alt="décor naturel"></img>
          </section>
          <div className="gallery">
             {Products.map((product) => (

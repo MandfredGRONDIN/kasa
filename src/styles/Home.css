@@ -1,3 +1,8 @@
+.home{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
 section{
     display: flex;
     justify-content: center;
@@ -13,27 +18,29 @@ section p{
     font-size: 48px;
     color: #FFFFFF;
 }
-.test{
+.home__img{
     width: 100%;
-    max-width: 92%;
-    border-radius: 10px;
+    max-width: 90%;
     min-height: 100px;
 }
 .gallery{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background: #F7F7F7;
+    border-radius: 25px;
+    width: 90%;
+    margin: 40px;
 }
 
 .product__item{
     display: flex;
     position: relative;
-    justify-content: flex-start;
     align-items: flex-end;
     overflow: hidden;
     max-width: 350px;
     width: 100%;
-    margin: 4%;
+    margin: 4.5%;
     border-radius: 10px;
 }
 

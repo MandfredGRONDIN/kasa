@@ -1,3 +1,6 @@
+body{
+    color: #FFFFFF;
+}
 .house{
     display: flex;
     flex-direction: column;
@@ -6,17 +9,10 @@
 }
 .house__carousel{
     width: 90%;
-    height: 600px;
-}
-.house__boxes{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
 }
 .house__box{
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
 }
 .house__left{
     margin: 40px 0 20px 0;
@@ -37,24 +33,6 @@
 .house__name p{
     width: 46%;
     margin: 0 10px 0 0;
-}
-.Carousel{
-    height: 100%;
-    border-radius: 25px;
-    overflow: hidden;
-}
-.carousel-root{
-    height: 100%;
-}
-.carousel-slider{
-    height: 100%;
-}
-.carousel .carousel-status{
-    top: 90%;
-    right: 50%;
-}
-.slider-wrapper{
-    height: 100%;
 }
 .house__div{
     height: 100%;
@@ -79,10 +57,8 @@ h2{
 }
 p{
     font-family: 'Montserrat';
-    font-style: normal;
-    font-size: 18px;
     color: #FF6060;
-    margin: 0 0 10px 0;
+    margin: 0;
 }
 .tags{
     display: flex;
@@ -90,14 +66,32 @@ p{
 }
 .tag{
     font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
     font-size: 14px;
     padding: 5px 20px;
     background: #FF6060;
     border-radius: 10px;
     width: 100px;
     text-align: center;
-    margin: 0 10px 10px 0;
-    color: #FFFFFF;
+    margin: 10px 10px 10px 0;
+}
+.drop{
+    display: flex;
+    justify-content: space-between;
+}
+.drop__down{
+    width: 47%;
+    margin-bottom: 30px;
+}
+.rating img{
+    margin: 15px 0 0 7px;
+}
+.dropdown__p__array{
+    padding: 15px;
+    background: #F7F7F7;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 24px;
+}
+.empty__star{
+    filter: contrast(0.7);
 }

@@ -27,7 +27,6 @@ function Slider(product) {
       top: "50%",
       transform: "translate(0, -50%)",
       left: "20px",
-      zIndex: 1,
       cursor: "pointer",
    };
 
@@ -36,7 +35,6 @@ function Slider(product) {
       top: "50%",
       transform: "translate(0, -50%)",
       right: "20px",
-      zIndex: 1,
       cursor: "pointer",
    };
 
@@ -46,7 +44,6 @@ function Slider(product) {
       justifyContent: "center",
       height: "96%",
       alignItems: "flex-end",
-      color: "#FFFFFF",
       fontSize: "17px",
       fontFamily: "Montserrat",
    };
@@ -63,7 +60,14 @@ function Slider(product) {
       setCurrentIndex(newIndex);
    };
 
-   return (
+   const test = () => {
+      if (slides.length - 1 >= 1) {
+         return true;
+      }
+      return false;
+   };
+
+   return test() ? (
       <div style={sliderStyles}>
          <img
             style={leftArrowStyles}
@@ -83,6 +87,8 @@ function Slider(product) {
             </div>
          </div>
       </div>
+   ) : (
+      <div style={slideStyles}></div>
    );
 }
 

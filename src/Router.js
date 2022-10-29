@@ -6,7 +6,6 @@ import Error from "./views/Error/Error";
 import FicheLogement from "./views/FicheLogement/FicheLogement";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import "./styles/styles.css";
 
 function Routing() {
    return (

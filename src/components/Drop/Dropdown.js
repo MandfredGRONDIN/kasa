@@ -2,20 +2,28 @@ import React, { useState } from "react";
 import ArrowTop from "../../assets/ArrowTop.png";
 import ArrowBot from "../../assets/ArrowBot.png";
 
-export default function DropDown({ items }) {
+export default function DropDown({ txt, title, txtArray }) {
    const [isOpen, setIsOpen] = useState(false);
 
    return isOpen ? (
-      <div className="tes">
+      <div>
          <button
             className="dropdown__button"
             type="button"
             onClick={() => setIsOpen(false)}
          >
-            <span>{items.value}</span>
+            <span>{title}</span>
             <img src={ArrowTop} alt="flèche vers le haut" />
          </button>
-         <p className="dropdown__p">{items.text}</p>
+         {txtArray ? (
+            <div className="dropdown__p__array">
+               {txtArray.map((txte, e) => (
+                  <p key={e}>{txte}</p>
+               ))}
+            </div>
+         ) : (
+            <p className="dropdown__p">{txt}</p>
+         )}
       </div>
    ) : (
       <button
@@ -23,7 +31,7 @@ export default function DropDown({ items }) {
          type="button"
          onClick={() => setIsOpen(true)}
       >
-         <span>{items.value}</span>
+         <span>{title}</span>
          <img src={ArrowBot} alt="flèche vers le bas" />
       </button>
    );

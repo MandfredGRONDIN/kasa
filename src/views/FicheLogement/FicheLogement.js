@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Slider from "../../components/Gallery/Gallery";
+import Slider from "../../components/Carousel/Carousel";
+import Rating from "../../components/Rating/Rating";
 import Products from "../../products.json";
+import DropDown from "../../components/Drop/Dropdown";
 import "../../styles/FicheLogement.css";
 
 export default function FicheLogement() {
@@ -18,7 +20,6 @@ export default function FicheLogement() {
    const containerStyles = {
       width: "100%",
       height: "400px",
-      margin: "0 auto",
    };
 
    return (
@@ -26,12 +27,10 @@ export default function FicheLogement() {
          <div className="house__carousel">
             {Products.filter((product) => product.id === params.id).map(
                (product, index) => (
-                  <div key={product.id} className="house__boxes">
-                     {console.log(product.pictures)}
+                  <div key={product.id - index} className="house__boxes">
                      <div style={containerStyles}>
                         <Slider data={product.pictures} />
                      </div>
-
                      <div className="house__box">
                         <div className="house__left">
                            <h2>{product.title}</h2>
@@ -53,7 +52,23 @@ export default function FicheLogement() {
                                  alt="Propriétaire du logement"
                               />
                            </div>
-                           <div> Rating </div>
+                           <div className="rating">
+                              <Rating rate={product.rating} />
+                           </div>
+                        </div>
+                     </div>
+                     <div className="drop">
+                        <div className="drop__down">
+                           <DropDown
+                              title={"Description"}
+                              txt={product.description}
+                           />
+                        </div>
+                        <div className="drop__down">
+                           <DropDown
+                              title={"Équipements"}
+                              txtArray={product.equipments}
+                           />
                         </div>
                      </div>
                   </div>
