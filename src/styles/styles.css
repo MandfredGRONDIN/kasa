@@ -1,6 +1,7 @@
 body{
     margin: 0; 
     background: #E5E5E5;
+    font-family: 'Montserrat';
 }
 /* Header */
 nav{
@@ -22,7 +23,6 @@ nav li{
 li a{
     cursor: pointer;
     font-size: 24px;
-    font-family: 'Montserrat';
     text-decoration: none;
     color: #FF6060;
 }
@@ -41,10 +41,8 @@ li a:hover{
     align-items: center;
     text-align: center;
     margin: 70px 0 20px 0;
-    font-family: 'Montserrat';
 }
 .error p{
-    font-weight: 500;
     font-size: 36px;
     width: 95%;
 }

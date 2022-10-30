@@ -17,18 +17,13 @@ export default function FicheLogement() {
       }
    });
 
-   const containerStyles = {
-      width: "100%",
-      height: "400px",
-   };
-
    return (
       <div className="house">
          <div className="house__carousel">
             {Products.filter((product) => product.id === params.id).map(
                (product, index) => (
                   <div key={product.id - index} className="house__boxes">
-                     <div style={containerStyles}>
+                     <div className="house__boxes-slider">
                         <Slider data={product.pictures} />
                      </div>
                      <div className="house__box">

@@ -38,16 +38,6 @@ function Slider(product) {
       cursor: "pointer",
    };
 
-   const numberStyles = {
-      display: "flex",
-      width: "100%",
-      justifyContent: "center",
-      height: "96%",
-      alignItems: "flex-end",
-      fontSize: "17px",
-      fontFamily: "Montserrat",
-   };
-
    const goToPrevious = () => {
       const isFirstSlide = currentIndex === 0;
       const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
@@ -70,19 +60,21 @@ function Slider(product) {
    return test() ? (
       <div style={sliderStyles}>
          <img
+            className="arrow"
             style={leftArrowStyles}
             src={ArrowLeft}
             alt="flèche vers la gauche"
             onClick={goToPrevious}
          ></img>
          <img
+            className="arrow"
             style={rightArrowStyles}
             src={ArrowRight}
             alt="flèche vers la droite"
             onClick={goToNext}
          ></img>
          <div style={slideStyles}>
-            <div style={numberStyles}>
+            <div className="number__styles">
                {currentIndex + 1}/{slides.length}
             </div>
          </div>
