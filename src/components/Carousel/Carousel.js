@@ -8,34 +8,8 @@ function Slider(product) {
 
    const slides = product.data;
 
-   const sliderStyles = {
-      height: "100%",
-      position: "relative",
-   };
-
    const slideStyles = {
-      width: "100%",
-      height: "100%",
-      borderRadius: "25px",
-      backgroundPosition: "center",
-      backgroundSize: "cover",
       backgroundImage: `url(${slides[currentIndex]})`,
-   };
-
-   const leftArrowStyles = {
-      position: "absolute",
-      top: "50%",
-      transform: "translate(0, -50%)",
-      left: "20px",
-      cursor: "pointer",
-   };
-
-   const rightArrowStyles = {
-      position: "absolute",
-      top: "50%",
-      transform: "translate(0, -50%)",
-      right: "20px",
-      cursor: "pointer",
    };
 
    const goToPrevious = () => {
@@ -50,37 +24,35 @@ function Slider(product) {
       setCurrentIndex(newIndex);
    };
 
-   const test = () => {
+   const oneImg = () => {
       if (slides.length - 1 >= 1) {
          return true;
       }
       return false;
    };
 
-   return test() ? (
-      <div style={sliderStyles}>
+   return oneImg() ? (
+      <div className="slider__styles">
          <img
-            className="arrow"
-            style={leftArrowStyles}
+            className="arrow left__arrow"
             src={ArrowLeft}
             alt="flèche vers la gauche"
             onClick={goToPrevious}
          ></img>
          <img
-            className="arrow"
-            style={rightArrowStyles}
+            className="arrow right__arrow"
             src={ArrowRight}
             alt="flèche vers la droite"
             onClick={goToNext}
          ></img>
-         <div style={slideStyles}>
+         <div style={slideStyles} className="slide__styles">
             <div className="number__styles">
                {currentIndex + 1}/{slides.length}
             </div>
          </div>
       </div>
    ) : (
-      <div style={slideStyles}></div>
+      <div style={slideStyles} className="slide__styles"></div>
    );
 }
 
