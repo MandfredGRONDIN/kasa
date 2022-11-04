@@ -10,7 +10,7 @@ export default function Header() {
             <ul>
                <li>
                   <Link to="/" className="items">
-                     Acceuil
+                     Accueil
                   </Link>
                </li>
                <li>

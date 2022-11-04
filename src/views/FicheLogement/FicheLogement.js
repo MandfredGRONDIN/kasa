@@ -5,6 +5,7 @@ import Rating from "../../components/Rating/Rating";
 import Products from "../../products.json";
 import DropDown from "../../components/Drop/Dropdown";
 import "../../styles/FicheLogement.css";
+import Meta from "../../components/Meta/Meta";
 
 export default function FicheLogement() {
    const params = useParams();
@@ -23,6 +24,10 @@ export default function FicheLogement() {
             {Products.filter((product) => product.id === params.id).map(
                (product, index) => (
                   <div key={product.id - index} className="house__boxes">
+                     <Meta
+                        title={product.title}
+                        description={product.description}
+                     />
                      <div className="house__boxes-slider">
                         <Slider data={product.pictures} />
                      </div>

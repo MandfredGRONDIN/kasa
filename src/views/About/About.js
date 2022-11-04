@@ -2,6 +2,7 @@ import React from "react";
 import AboutImg from "../../assets/About.png";
 import AboutM from "../../assets/AboutM.png";
 import DropDown from "../../components/Drop/Dropdown";
+import Meta from "../../components/Meta/Meta";
 import "../../styles/About.css";
 
 export default function About() {
@@ -29,7 +30,11 @@ export default function About() {
    ];
    return (
       <div className="about">
-         <section>
+         <Meta
+            title="A Propos de Kasa"
+            description="Kasa c'est avant tout de la fiabilité, du respect, un service de qualité et une sécurité mise en avant"
+         />
+         <section className="about__section">
             <img
                className="about__img"
                src={AboutImg}

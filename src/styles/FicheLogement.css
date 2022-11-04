@@ -101,9 +101,6 @@ p{
     margin: 0;
     font-size: 24px;
 }
-.empty__star{
-    filter: contrast(0.7);
-}
 .slider__styles{
     height: 100%;
     position: relative;
@@ -142,12 +139,18 @@ p{
         flex-direction: row-reverse;
         margin-top: 10px;
     }
+    .house__host{
+        width: 40px;
+    }
+    .house__name p{
+        width: 100%;
+    }
     h2{
         font-size: 23px;
     }
     p{
         line-height: 142.6%;
-        font-size: 19px;
+        font-size: 14px;
     }
     .tag{
         font-size: 12px;

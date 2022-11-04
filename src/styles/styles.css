@@ -1,6 +1,6 @@
 body{
     margin: 0; 
-    background: #E5E5E5;
+    color: #FFFFFF;
     font-family: 'Montserrat';
 }
 /* Header */
@@ -77,17 +77,18 @@ li a:hover{
 
 @media all and (max-width:768px){
     .header__logo{
-        Width : 120px;
-        height: 40px;
+        Width : 145px;
+        height: 47px;
     }
     li a{
-        font-size: 18px;
+        font-size: 13px;
+        text-transform: uppercase;
     }
     nav li{
         padding: 0 10px 0 10px;
     }
     .footer__text{
-        font-size: 19px;
+        font-size: 14px;
     }
     /* Error */
     .error img{

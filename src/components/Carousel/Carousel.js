@@ -24,14 +24,14 @@ function Slider(product) {
       setCurrentIndex(newIndex);
    };
 
-   const oneImg = () => {
+   const moreOneImg = () => {
       if (slides.length - 1 >= 1) {
          return true;
       }
       return false;
    };
 
-   return oneImg() ? (
+   return moreOneImg() ? (
       <div className="slider__styles">
          <img
             className="arrow left__arrow"
