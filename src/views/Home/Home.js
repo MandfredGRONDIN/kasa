@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../../styles/Home.css";
-import HomeImg from "../../assets/Home.png";
 import Products from "../../products.json";
 import Meta from "../../components/Meta/Meta";
+import HomeImg from "../../assets/Home.png";
+import "../../styles/Home.css";
 
 export default function Home() {
    const [currImg] = useState(0);

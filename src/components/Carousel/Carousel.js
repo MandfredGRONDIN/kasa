@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ArrowLeft from "../../assets/ArrowLeft.png";
 import ArrowRight from "../../assets/ArrowRight.png";
 
@@ -8,9 +8,11 @@ function Slider(product) {
 
    const slides = product.data;
 
-   const slideStyles = {
-      backgroundImage: `url(${slides[currentIndex]})`,
-   };
+   useEffect(() => {
+      slides.forEach((image) => {
+         new Image().src = image;
+      });
+   }, [slides]);
 
    const goToPrevious = () => {
       const isFirstSlide = currentIndex === 0;
@@ -45,14 +47,21 @@ function Slider(product) {
             alt="flèche vers la droite"
             onClick={goToNext}
          ></img>
-         <div style={slideStyles} className="slide__styles">
-            <div className="number__styles">
-               {currentIndex + 1}/{slides.length}
-            </div>
-         </div>
+         <img
+            src={`${slides[currentIndex]}`}
+            className="slide__styles"
+            alt="logement"
+         ></img>
+         <span className="number__styles">
+            {currentIndex + 1}/{slides.length}
+         </span>
       </div>
    ) : (
-      <div style={slideStyles} className="slide__styles"></div>
+      <img
+         src={`${slides[currentIndex]}`}
+         className="slide__styles"
+         alt="logement"
+      ></img>
    );
 }
 

@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Products from "../../products.json";
 import Slider from "../../components/Carousel/Carousel";
 import Rating from "../../components/Rating/Rating";
-import Products from "../../products.json";
 import DropDown from "../../components/Drop/Dropdown";
-import "../../styles/FicheLogement.css";
 import Meta from "../../components/Meta/Meta";
+import "../../styles/FicheLogement.css";
 
 export default function FicheLogement() {
    const params = useParams();
@@ -34,7 +34,7 @@ export default function FicheLogement() {
                      <div className="house__box">
                         <div className="house__left">
                            <h2>{product.title}</h2>
-                           <p>{product.location}</p>
+                           <p className="house__location">{product.location}</p>
                            <div className="tags">
                               {product.tags.map((tag, key) => (
                                  <div className="tag" key={key}>

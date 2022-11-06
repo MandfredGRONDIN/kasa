@@ -15,5 +15,4 @@ export default function Meta({ title, description }) {
          "Kasa est une entreprise dans la location d'appartements entre particuliers. Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de la location d'appartements entre particuliers en France"
       );
    }
-   console.log(desc);
 }

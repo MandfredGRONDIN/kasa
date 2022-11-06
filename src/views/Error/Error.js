@@ -9,7 +9,9 @@ export default function Error() {
          <div>
             <img src={Error404} alt="erreur 404" />
          </div>
-         <p>Oups! La page que vous demandez n'existe pas.</p>
+         <p className="error__p">
+            Oups! La page que vous demandez n'existe pas.
+         </p>
          <Link to={`/`} className="error__home">
             Retour sur la page d'acceuil
          </Link>

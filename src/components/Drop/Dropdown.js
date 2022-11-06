@@ -18,7 +18,9 @@ export default function DropDown({ txt, title, txtArray }) {
          {txtArray ? (
             <div className="dropdown__p__array">
                {txtArray.map((txte, e) => (
-                  <p key={e}>{txte}</p>
+                  <p className="dropdown__p-array" key={e}>
+                     {txte}
+                  </p>
                ))}
             </div>
          ) : (
