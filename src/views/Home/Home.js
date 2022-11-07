@@ -8,9 +8,14 @@ import "../../styles/Home.css";
 export default function Home() {
    const [currImg] = useState(0);
 
+   const metaTitle = "Kasa : location d'appartements entre particuliers";
+
+   const metaDescription =
+      "Kasa est une entreprise dans la location d'appartements entre particuliers. Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de la location d'appartements entre particuliers en France";
+
    return (
       <div className="home">
-         <Meta title={null} description={null} />
+         <Meta title={metaTitle} description={metaDescription} />
          <section className="home__section">
             <p>Chez vous, partout et ailleurs</p>
             <div className="home__img">

@@ -83,7 +83,7 @@ p{
 }
 .tag{
     font-size: 14px;
-    padding: 5px 20px;
+    padding: 5px 22px;
     background: #FF6060;
     border-radius: 10px;
     min-width: 100px;
@@ -117,13 +117,58 @@ p{
 .slider__styles{
     height: 100%;
     position: relative;
+    overflow: hidden;
+}
+.slide__stylest{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+    position: absolute;
+    transform: translatex(200%);
+}
+.slide__stylest.active{
+    transition-duration: 0.5s;
+    transform: translateX(100%);
 }
 .slide__styles{
     width: 100%;
     height: 100%;
     border-radius: 25px;
     object-fit: cover;
+    position: absolute;
+    transform: translatex(-100%);
 }
+.slide__styles.actived{
+    transition-duration: 0.5s;
+    transform: translateX(100%);
+}
+/* .slide__styles-left{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+    position: absolute;
+    transform: translateX(100%);
+} 
+.slide__styles-left.active{
+    opacity: 1;
+    transition-duration: 1s;
+    transform: translateX(-100%);
+}
+.slide__styles-right{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+    position: absolute;
+    transform: translateX(-100%);
+} 
+.slide__styles-right.actived{
+    opacity: 1;
+    transition-duration: 1s;
+    transform: translateX(100%);
+} */
 .arrow{
     position: absolute;
     top: 50%;
@@ -142,7 +187,6 @@ p{
     border-radius: 10px;
     padding: 0 15px 0 15px;
 }
-
 
 @media all and (max-width:768px){
     .house{

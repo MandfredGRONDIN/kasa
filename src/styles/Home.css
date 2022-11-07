@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin-top: 3%;
 }
 .home__section{
     display: flex;
@@ -42,7 +43,6 @@ section p{
     width: 90%;
     margin: 30px;
 }
-
 .product__item{
     display: flex;
     position: relative;
@@ -60,7 +60,7 @@ section p{
 }
 .product__title span{
     display: block;
-    padding: 0 20px 20px 17px;
+    padding: 0 20px 15px 15px;
     font-size: 18px;
     color: #FFFFFF;
 }
