@@ -5,7 +5,7 @@ import ArrowRight from "../../assets/ArrowRight.png";
 
 function Slider(product) {
    const [currentIndex, setCurrentIndex] = useState(0);
-   const [test, setTest] = useState(true);
+   const [right, setRight] = useState(true);
    const slides = product.data;
 
    useEffect(() => {
@@ -15,14 +15,14 @@ function Slider(product) {
    }, [slides]);
 
    const goToPrevious = () => {
-      setTest(false);
+      setRight(false);
       const isFirstSlide = currentIndex === 0;
       const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
       setCurrentIndex(newIndex);
    };
 
    const goToNext = () => {
-      setTest(true);
+      setRight(true);
       const isLastSlide = currentIndex === slides.length - 1;
       const newIndex = isLastSlide ? 0 : currentIndex + 1;
       setCurrentIndex(newIndex);
@@ -55,22 +55,23 @@ function Slider(product) {
                <div
                   className={
                      index === currentIndex
-                        ? `${
-                             test
-                                ? "slide__stylest active"
-                                : "slide__styles actived"
-                          }`
-                        : `${test ? "slide__stylest" : "slide__styles"}`
+                        ? `${right ? "right" : "left"}`
+                        : "slide__styles-hide"
                   }
                   key={index}
                >
                   {index === currentIndex && (
-                     <img src={slide} alt="" className="slide__styles"></img>
+                     <img
+                        src={slide}
+                        alt="logement"
+                        className={
+                           right ? "slide__styles-right" : "slide__styles-left"
+                        }
+                     ></img>
                   )}
                </div>
             );
          })}
-         {/* <img src={`${slides}`} className="slide__styles" alt="logement"></img> */}
          <span className="number__styles">
             {currentIndex + 1}/{slides.length}
          </span>
@@ -78,7 +79,7 @@ function Slider(product) {
    ) : (
       <img
          src={`${slides[currentIndex]}`}
-         className="slide__styles"
+         className="slide__styles-one"
          alt="logement"
       ></img>
    );

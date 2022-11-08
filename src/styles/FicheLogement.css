@@ -1,18 +1,27 @@
-body{
-    color: #FFFFFF;
-}
-.house{
+#house{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
-.house__carousel{
+.house{
     width: 90%;
 }
 .house__box{
     display: flex;
     justify-content: space-between;
+}
+
+/*--- Info des logements ---*/
+h2{
+    font-weight: 500;
+    font-size: 36px;
+    color: #FF6060;
+    margin: 0;
+}
+p{
+    color: #FF6060;
+    margin: 10px 0 10px 0;
 }
 .house__left{
     width: 70%;
@@ -46,34 +55,6 @@ body{
     transform: translate(-50%, -50%);
     object-fit: cover;
 }
-.house__boxes-slider{
-    width: 100%;
-    height: 415px;
-}
-.number__styles{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    height: 90%;
-    align-items: flex-end;
-    font-size: 17px;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-}
-.slider{
-    height: 100%;
-}
-h2{
-    font-weight: 500;
-    font-size: 36px;
-    color: #FF6060;
-    margin: 0;
-}
-p{
-    color: #FF6060;
-    margin: 10px 0 10px 0;
-}
 .house__location{
     font-size: 18px;
 }
@@ -90,85 +71,66 @@ p{
     text-align: center;
     margin: 10px 10px 10px 0;
 }
-.drop{
-    display: flex;
-    justify-content: space-between;
-}
-.drop__down{
-    width: 47%;
-    margin-bottom: 30px;
-}
 .rating img{
     margin: 25px 0 0 7px;
 }
-.dropdown__p__array{
-    font-family: 'Montserrat';
-    font-size: 18px;
-    line-height: 142.6%;
-    color: #FF6060;
-    padding: 30px 30px 40px 15px;
-    background: #F6F6F6;
-    border-radius: 5px;
-    margin: 0;
+/*--- Fin info logements ---*/
+
+/*--- Carousel ---*/
+.house__carousel{
+    width: 100%;
+    height: 415px;
 }
-.dropdown__p-array{
-    margin: 0;
+.number__styles{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 90%;
+    align-items: flex-end;
+    font-size: 17px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 .slider__styles{
     height: 100%;
     position: relative;
     overflow: hidden;
-}
-.slide__stylest{
-    width: 100%;
-    height: 100%;
     border-radius: 25px;
-    object-fit: cover;
-    position: absolute;
-    transform: translatex(200%);
 }
-.slide__stylest.active{
-    transition-duration: 0.5s;
-    transform: translateX(100%);
-}
-.slide__styles{
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    object-fit: cover;
-    position: absolute;
-    transform: translatex(-100%);
-}
-.slide__styles.actived{
-    transition-duration: 0.5s;
-    transform: translateX(100%);
-}
-/* .slide__styles-left{
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    object-fit: cover;
-    position: absolute;
-    transform: translateX(100%);
-} 
-.slide__styles-left.active{
-    opacity: 1;
-    transition-duration: 1s;
-    transform: translateX(-100%);
-}
+
 .slide__styles-right{
     width: 100%;
     height: 100%;
-    border-radius: 25px;
     object-fit: cover;
-    position: absolute;
+    transform: translatex(100%);
+}
+.slide__styles-hide{
+    transform: translatex(0);
+}
+.slide__styles-left{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translatex(-100%);
+}
+.right{
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.3s;
     transform: translateX(-100%);
-} 
-.slide__styles-right.actived{
-    opacity: 1;
-    transition-duration: 1s;
+}
+.left{
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.3s;
     transform: translateX(100%);
-} */
+}
+.slide__styles-one{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .arrow{
     position: absolute;
     top: 50%;
@@ -183,13 +145,39 @@ p{
     right: 20px;
     z-index: 1;
 }
+/*--- Fin Carousel ---*/
+
+/*--- Dropdown ---*/
+.drop{
+    display: flex;
+    justify-content: space-between;
+}
+.drop__down{
+    width: 47%;
+    margin-bottom: 30px;
+}
+.dropdown__p__array{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 142.6%;
+    color: #FF6060;
+    padding: 30px 30px 40px 15px;
+    background: #F6F6F6;
+    border-radius: 5px;
+    margin: 0;
+}
+.dropdown__p-array{
+    margin: 0;
+}
 .house__boxes .dropdown__button{
     border-radius: 10px;
     padding: 0 15px 0 15px;
 }
+/*--- Fin Dropdown ---*/
 
+/*--- Mobile ---*/
 @media all and (max-width:768px){
-    .house{
+    #house{
         margin-top: 30px;
     }
     .house__box{
@@ -239,10 +227,10 @@ p{
     .arrow{
         height: 25px;
     }
-    .house__boxes-slider{
+    .house__carousel{
         height: 255px;
     }
-    .slide__styles{
+    .slider__styles{
         border-radius: 10px;
     }
     .number__styles{
@@ -252,3 +240,4 @@ p{
         flex-wrap: wrap;
     }
 }
+/*--- Fin Mobile ---*/

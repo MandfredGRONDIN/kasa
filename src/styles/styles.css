@@ -3,7 +3,7 @@ body{
     color: #FFFFFF;
     font-family: 'Montserrat';
 }
-/* Header */
+/*--- Header ---*/
 nav{
     display: flex;
     justify-content: space-between;
@@ -33,8 +33,9 @@ li a:hover{
     height: 68px;
     width: 210px;
 }
-/* Fin Header */
-/* Error */
+/*--- Fin Header ---*/
+
+/*--- Error ---*/
 .error{
     display: flex;
     flex-direction: column;
@@ -59,8 +60,9 @@ li a:hover{
 .error img{
     width: 95%;
 }
-/* Fin Error */
-/* Footer */ 
+/*--- Fin Error ---*/
+
+/*--- Footer ---*/ 
 .footer{
     display: flex;
     justify-content: center;
@@ -75,7 +77,9 @@ li a:hover{
     font-size: 24px;
     color: #FFFFFF;
 }
+/*-- Fin Footer ---*/
 
+/*--- Mobile ---*/
 @media all and (max-width:768px){
     .header__logo{
         Width : 145px;
@@ -94,7 +98,6 @@ li a:hover{
     .footer__text{
         font-size: 14px;
     }
-    /* Error */
     .error img{
         width: 198px;
         height: 99px;
@@ -109,3 +112,4 @@ li a:hover{
         text-decoration: underline;
     }
 }
+/*--- Fin Mobile ---*/

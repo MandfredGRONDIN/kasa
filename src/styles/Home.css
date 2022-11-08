@@ -4,6 +4,8 @@
     align-items: center;
     margin-top: 3%;
 }
+
+/*--- Bannière ---*/
 .home__section{
     display: flex;
     justify-content: center;
@@ -26,7 +28,6 @@ section p{
     object-fit: cover;
     overflow: hidden;
 }
-
 .home__img img{
     width: 100%;
     height: 100%;
@@ -34,6 +35,9 @@ section p{
     min-height: 111px;
     object-fit: cover;
 }
+/*--- Fin Bannière ---*/
+
+/*--- Gallery ---*/
 .gallery{
     display: flex;
     flex-wrap: wrap;
@@ -69,7 +73,9 @@ section p{
     height: 350px;
     object-fit: cover;
 }
+/*--- Fin Gallery ---*/
 
+/*--- Mobile ---*/
 @media all and (max-width:768px){
     .home__section{
         height: 111px;
@@ -100,3 +106,4 @@ section p{
         margin: 10px;
     }
 }
+/*--- Fin Mobile ---*/

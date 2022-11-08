@@ -19,8 +19,8 @@ export default function FicheLogement() {
    });
 
    return (
-      <div className="house">
-         <div className="house__carousel">
+      <div id="house">
+         <div className="house">
             {Products.filter((product) => product.id === params.id).map(
                (product, index) => (
                   <div key={product.id - index} className="house__boxes">
@@ -28,7 +28,7 @@ export default function FicheLogement() {
                         title={product.title}
                         description={product.description}
                      />
-                     <div className="house__boxes-slider">
+                     <div className="house__carousel">
                         <Slider data={product.pictures} />
                      </div>
                      <div className="house__box">
