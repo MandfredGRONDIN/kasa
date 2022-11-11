@@ -1,6 +1,6 @@
 ### Init
 
-You must have Node
+You must have Node and npm
 
 Go to KASA file in the terminal
 
