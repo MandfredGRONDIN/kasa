@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ArrowLeft from "../../assets/ArrowLeft.png";
 import ArrowRight from "../../assets/ArrowRight.png";
 
@@ -7,6 +7,12 @@ function Slider(product) {
    const [currentIndex, setCurrentIndex] = useState(0);
    const [right, setRight] = useState(true);
    const slides = product.data;
+
+   useEffect(() => {
+      slides.forEach((image) => {
+         new Image().src = image;
+      });
+   }, [slides]);
 
    const goToPrevious = () => {
       setRight(false);
